@@ -1,12 +1,18 @@
 # DS3231
-## Real-time clock (RTC) driver for DS3231
+## Driver for Real-time clock (RTC) DS3231
 
+  - **Integrated** crystal oscillator
+  - **I2C** communication interface
+ - Two programmable alarms
+ - Operating voltage: **2.3–5.5 V**
+ - Battery backup support
+ - Internal temperature sensor
 
 ### Summary
-`RTC_DS3231 RTC(i2c);`
+`RTC_DS3231 RTC(i2c_bus);`
 
- - Uses `bus` as a communication [I2C](../../I2C) interface
- - Represents one DS3231-compatible RTC at the fixed I2C address (`0x68`)
+ - Uses `i2c_bus` as a communication [I2C](../../I2C) interface
+ - Represents DS3231-compatible RTC at the fixed I2C address (**0x68**)
  - Provides date/time access, oscillator-stop detection, hardware alarms, temperature reading, and clock outputs
 
 ### Typical usage and definitions
