@@ -32,14 +32,6 @@ RTC.get_time(...);          // get time
 RTC_DS3231 <I2C0> RTC;      // declare RTC object
 RTC.get_time(...)           // get time
 ```
- 
-#### Object-like CTAD style
-```cpp
-I2C0 i2c;                   // declare bus object
-i2c.init_master(...);       // configure I2C bus
-RTC_DS3231 RTC(i2c);        // declare RTC object
-RTC.get_time(...);          // get time
-```
 
 #### Static style
 ```cpp
